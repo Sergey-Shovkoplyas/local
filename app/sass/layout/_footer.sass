@@ -1,0 +1,171 @@
+.footer 
+  padding: 60px 0px
+  background-color: #fff
+  border-top: 2px solid #9FCC3B
+  color: #6C6E6B
+  +media-sm 
+    padding: 30px 0px
+
+.footer__row
+  display: flex 
+  justify-content: space-between
+  margin-bottom: 100px
+  +media-sm 
+    flex-direction: column
+    margin-bottom: 15px
+
+.footer__left 
+  margin-right: 25px
+  +media-sm
+    margin-right: 0
+    margin-bottom: 10px
+
+
+.footer__logo
+  width: 216px
+  margin-bottom: 35px
+  a 
+    display: block
+  img 
+    width: 100%
+  +media-sm   
+    width: 150px
+    margin: 0 auto
+    margin-bottom: 20px
+
+.footer__subtitle
+  font-size: 20px
+  font-weight: 500
+  margin-bottom: 10px
+  +media-sm 
+    font-size: 19px
+
+.footer__contact
+  font-size: 36px 
+  font-weight: 300
+  margin-bottom: 30px
+  +media-lg
+    &.mail 
+      font-size: 24px
+  +media-sm 
+    font-size: 24px
+    margin-bottom: 20px
+
+// ---------------- footer__right ---------
+
+.footer__right
+  display: flex 
+  justify-content: space-between
+  +media-sm 
+    flex-direction: column
+
+
+.footer__col
+  width: 220px
+  &:first-child 
+    margin-right: 70px
+  +media-lg 
+    &:first-child 
+      margin-right: 20px
+  +media-md
+    &:first-child 
+      width: 180px
+      margin-right: 0px
+  +media-sm 
+    width: 100%
+    &:first-child 
+      width: 100%
+
+.footer__item
+  margin-bottom: 30px
+  &:last-child 
+    margin-bottom: 0
+  +media-sm 
+    margin-bottom: 10px
+
+.footer__item-title
+  font-size: 26px
+  font-weight: 700
+  margin-bottom: 20px
+  &:not(.sublist):hover
+    color: #9FCC3B
+  +media-sm 
+    font-size: 22px
+    &.sublist a 
+      position: relative
+      display: inline-block
+      padding-right: 20px
+      &::before
+        position: absolute
+        content: ''
+        top: 11px
+        right: 0
+        width: 12px
+        height: 8px
+        background: url('../img/catalog-arrow.svg') no-repeat center
+        transition: .3s
+    &.sublist.active a
+      &::before
+        transform: rotate(180deg)
+
+.footer__item-list
+  padding: 0
+  margin: 0
+  list-style: none
+  font-size: 26px
+  li 
+    margin-bottom: 10px
+  li:last-child 
+    margin-bottom: 0
+  a:hover 
+    text-decoration: underline
+    color: #9FCC3B
+  +media-sm 
+    font-size: 20px
+    margin-bottom: 20px
+    display: none 
+ 
+    
+
+// ---------------- footer__bottom ---------
+
+.footer__bottom
+  margin: 0 -45px
+  padding-bottom: 30px
+  border-bottom: 4px solid #E5E5E5
+  +media-sm 
+    margin: 0
+    padding-bottom: 10px
+
+.footer__bottom-wrap
+  max-width: 610px 
+  margin: 0 auto 
+  display: flex
+  justify-content: space-between
+  align-items: center
+  +media-sm 
+    flex-direction: column 
+  
+
+.footer__download
+  a 
+    display: inline-block
+    margin-right: 15px
+  +media-sm 
+    display: flex
+    justify-content: space-between
+    margin-bottom: 10px
+    a:last-child 
+      margin-right: 0
+    img 
+      width: 100%
+
+.footer__social
+  +media-sm 
+    transform: scale(.8)
+    
+
+// ---------------- test ---------
+
+.some-item__list
+  position: absolute

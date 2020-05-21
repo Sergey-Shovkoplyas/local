@@ -1,0 +1,24 @@
+.nav-btn 
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+  width: 25px
+  height: 15px
+  cursor: pointer
+  transition: .3s
+  span 
+    display: block
+    height: 2px 
+    width: 100%
+    background-color: #006F30
+    transition: .3s
+    &:nth-child(2)
+      opacity: 1
+.nav-btn.active 
+  span
+    &:nth-child(1)
+      transform: translateY(7px) rotate(45deg)
+    &:nth-child(2)
+      opacity: 0
+    &:nth-child(3)
+      transform: translateY(-7px) rotate(-45deg)

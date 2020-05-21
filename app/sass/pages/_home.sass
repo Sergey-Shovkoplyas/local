@@ -1,0 +1,181 @@
+.home__popular
+  margin-bottom: 120px
+  +media-sm 
+    margin-bottom: 60px
+  
+.home__top
+  padding: 220px 0px 270px
+  background: url('../img/home__top-bg.jpg') no-repeat center 
+  background-size: cover
+  margin-bottom: 60px
+  +media-sm 
+    padding: 60px 0
+
+.home__top-wrap
+  max-width: 480px
+
+.home__top-ontitle
+  text-transform: uppercase
+  color: #fff
+  font-size: 24px 
+  font-weight: 700
+  margin-bottom: 10px
+  +media-sm 
+    font-size: 20px
+
+.home__top-title 
+  margin: 0
+  color: #0E0E10
+  font-size: 60px 
+  font-weight: 700
+  margin-bottom: 10px
+  +media-sm 
+    font-size: 40px
+
+.home__top-text
+  line-height: 1.5
+  margin-bottom: 60px
+  +media-sm 
+    margin-bottom: 30px
+
+.home__top-btn
+  width: 255px
+  +media-sm
+    margin: 0 auto
+
+// ----------------- home__why --------------------
+
+.home__why
+  margin-bottom: 80px
+  +media-sm 
+    margin-bottom: 30px
+
+
+.home__why-title
+  font-size: 36px 
+  line-height: 1.3
+  text-transform: uppercase
+  margin-bottom: 60px
+  text-align: center
+  +media-sm 
+    font-size: 25px
+    margin-bottom: 25px
+
+.home__why-row
+  display: flex 
+  flex-wrap: wrap
+  margin: 0 -15px
+
+.home__why-col
+  padding: 15px
+  width: 33.33%
+  +media-md
+    width: 50%
+  +media-sm
+    width: 100%
+
+.home__why-item
+  padding: 210px 22px 40px
+  border: 2.5px solid #9FCC3B
+  border-radius: 20px
+  height: 100%
+  &.item-1
+    background: url('../img/why-1.png') no-repeat top 20px center
+  &.item-2
+    background: url('../img/why-2.png') no-repeat top 20px center
+  &.item-3
+    background: url('../img/why-3.png') no-repeat top 30px center
+
+
+.home__why-subtitle
+  font-size: 18px 
+  font-weight: 700
+  text-align: center
+  letter-spacing: 0.05em
+  text-transform: uppercase
+  color: #3A8A56
+  margin-bottom: 20px
+
+.home__why-text
+  font-size: 14px
+  line-height: 1.5
+  letter-spacing: 0.05em
+  text-align: center
+
+// ----------------- home__booklet --------------------
+
+.home__booklet
+  margin-bottom: 70px
+  +media-sm 
+    margin-bottom: 50px
+
+.home__booklet-row
+  max-width: 950px
+  margin: 0 auto 
+  display: flex 
+  justify-content: space-between
+  align-items: center
+  +media-md
+    flex-direction: column
+
+.home__booklet-img
+  +media-lg 
+    img 
+      width: 100%
+  +media-md
+    padding-left: 180px
+    margin-bottom: 30px
+  +media-md
+    padding-left: 0 
+    margin-bottom: 20px
+
+.home__booklet-text
+  flex-shrink: 0
+  width: 540px
+  +media-md
+    margin: 0 auto
+  +media-sm 
+    width: 100%
+
+.home__booklet-wrap
+  position: relative
+  width: 390px
+  &::after 
+    position: absolute
+    top: -35px
+    right: -135px
+    content: '%'
+    width: 120px
+    height: 190px
+    font-weight: bold
+    font-size: 160px
+    line-height: 187px
+    color: #9FCC3B
+  +media-sm 
+    width: 100%
+    &::after 
+      display: none
+
+.home__booklet-title
+  text-transform: uppercase
+  font-size: 60px 
+  font-weight: 700
+  color: #006F30
+  +media-sm 
+    font-size: 45px
+
+.home__booklet-subtitle
+  text-transform: uppercase
+  font-size: 50px 
+  font-weight: 700
+  color: #9FCC3B
+  margin-bottom: 20px
+  +media-sm 
+    font-size: 35px
+
+.home__booklet-btn
+  width: 255px
+  float: right
+  +media-sm 
+    float: none 
+    margin: 0 auto

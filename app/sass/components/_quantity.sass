@@ -1,0 +1,54 @@
+.quantity
+  width: 94px
+  display: flex
+  justify-content: space-between
+  align-items: center
+.quantity__input
+  width: 100%
+  text-align: center
+  background-color: transparent
+  border: none 
+  outline: none
+  color: #fff
+  font-size: 24px
+  line-height: 25px
+  font-weight: 700
+
+
+.quantity__bnt
+  position: relative
+  flex-shrink: 0
+  width: 25px
+  height: 25px
+  outline: none
+  border: 2px solid #fff
+  border-radius: 6px
+  background-color: transparent
+  cursor: pointer
+  &:active 
+    transform: scale(0.9)
+
+.quantity__bnt--minus 
+  &::before 
+    position: absolute
+    content: ''
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    height: 2px
+    width: 15px
+    background: #fff
+
+.quantity__bnt--plus 
+  &::before,
+  &::after 
+    position: absolute
+    content: ''
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+    height: 2px
+    width: 15px
+    background: #fff
+  &::after 
+    transform: translate(-50%, -50%) rotate(90deg)
