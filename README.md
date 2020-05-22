@@ -9,9 +9,9 @@ Developer: Sergey Shovkoplyas
 Pages
 - https://sergey-shovkoplyas.github.io/local/app/index.html
 - https://sergey-shovkoplyas.github.io/local/app/product.html
-- https://sergey-shovkoplyas.github.io/local/app/payment
-- https://sergey-shovkoplyas.github.io/local/app/payment-2
-- https://sergey-shovkoplyas.github.io/local/app/cart
+- https://sergey-shovkoplyas.github.io/local/app/payment.html
+- https://sergey-shovkoplyas.github.io/local/app/payment-2.html
+- https://sergey-shovkoplyas.github.io/local/app/cart.html
 
 Start template with (optional)
 - normalize.css
