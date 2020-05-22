@@ -1,0 +1,148 @@
+.product__top
+  padding: 150px 0px 160px
+  background-color: #F2F2F2
+  margin-bottom: 60px
+  +media-md 
+    padding: 100px 0px
+  +media-sm 
+    padding: 50px 0px
+  
+.product__top-row
+  display: flex
+  justify-content: space-between
+  +media-sm 
+    flex-direction: column
+
+.product__top-img
+  width: 285px
+  margin-right: 20px
+  img 
+    width: 100%
+  +media-sm 
+    width: 200px
+    margin-right: 0
+    margin: 0 auto
+    margin-bottom: 20px
+
+.product__top-right
+  width: 745px
+  +media-md
+    width: 390px
+  +media-sm 
+    width: 100%
+
+.product__top-title
+  h1
+    margin: 0
+    font-size: 40px
+    font-weight: 700
+    text-transform: uppercase 
+    margin-bottom: 40px
+  +media-sm 
+    h1 
+      font-size: 30px
+      margin-bottom: 20px
+      text-align: center
+
+.product__top-about
+  display: flex
+  justify-content: space-between
+  +media-sm 
+    flex-direction: column
+
+.product__top-about-left
+  width: 117px 
+  margin-right: 20px
+  +media-sm 
+    // display: flex
+    // justify-content: space-between
+    width: 100%
+
+.product__top-about-right
+  width: 540px
+  +media-md
+    width: 230px
+  +media-sm 
+    width: 100%
+  
+
+.product__top-subtitle
+  letter-spacing: 0.05em
+  color: #6C6E6B
+  margin-bottom: 10px
+  +media-sm 
+    text-align: center
+
+.product__top-value
+  font-weight: 700 
+  font-size: 20px
+  margin-bottom: 40px
+  &.old 
+    margin-bottom: 5px
+    text-decoration:  line-through
+  &.new
+    font-size: 30px
+    color: #006F30
+  +media-sm 
+    text-align: center
+    margin-bottom: 20px
+
+.product__top-text
+  margin-bottom: 37px
+  +media-sm 
+    text-align: justify
+
+.product__top-btn
+  width: 193px
+  .button 
+    position: relative
+    text-align: left
+    padding-left: 70px
+    &::before 
+      position: absolute
+      content: ''
+      top: 14px
+      left: 30px
+      width: 28px
+      height: 28px
+      background: url('../img/cart-white.svg') no-repeat center
+      background-size: contain
+  +media-sm 
+    margin: 0 auto
+
+
+// -------------- product__info ------------------
+
+.product__info 
+  margin-bottom: 100px
+  +media-md 
+    margin-bottom: 60px
+
+
+.product__info-title
+  font-size: 36px
+  margin-bottom: 40px
+  +media-sm 
+    font-size: 26px
+    margin-bottom: 30px
+
+.product__info-row
+  display: flex 
+  justify-content: space-between
+  border-bottom: 2px solid #F2F2F2
+  margin-bottom: 20px
+  color: #6C6E6B
+  +media-sm 
+    margin-bottom: 15px
+
+.product__info-col
+  width: 50%
+  padding-bottom: 20px
+  +media-sm 
+    margin-right: 20px
+    padding-bottom: 15px
+
+.product__popular
+  margin-bottom: 100px
+  +media-sm 
+    margin-bottom: 50px

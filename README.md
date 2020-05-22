@@ -1,5 +1,17 @@
 # local
 
+Developer: Sergey Shovkoplyas 
+- Skype: shovkoplyassergey_1
+- Telegram: @SergShovk
+- E-mail: shovkoplyassergey@gmail.com
+
+
+Pages
+- https://sergey-shovkoplyas.github.io/local/app/index.html
+- https://sergey-shovkoplyas.github.io/local/app/product.html
+- https://sergey-shovkoplyas.github.io/local/app/payment.html
+- https://sergey-shovkoplyas.github.io/local/app/payment-2.html
+
 Start template with (optional)
 - normalize.css
 - jquery-3.4.1.min.js
