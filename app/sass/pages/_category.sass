@@ -1,0 +1,153 @@
+.category-wrap
+  padding: 70px 0px 100px 
+  +media-sm 
+    padding: 50px 0px
+
+.category__row
+  display: flex
+  justify-content: space-between
+
+.category__left 
+  width: 305px
+  flex-shrink: 0
+  height: 1000px
+  background-color: #F2F2F2
+  margin-right: 30px
+
+
+// ----------------- .category__right -----------------
+
+.category__right
+  width: 1395px
+  outline: 1px solid red
+
+.category__top 
+  display: flex
+  justify-content: space-between
+  align-items: center
+  margin-bottom: 100px
+
+.category__title
+  h1 
+    text-transform: uppercase
+    margin: 0
+    font-size: 40px 
+    font-weight: 700
+  +media-sm 
+    h1 
+      font-size: 35px
+
+.category__buttons
+  display: flex
+  justify-content: space-between
+  align-items: center
+  width: 665px
+  +media-1350 
+    flex-direction: column
+
+.category__sort
+  display: flex
+  justify-content: space-between
+  align-items: center
+  width: 380px
+  border: 2px solid #9FCC3B
+  border-radius: 8px
+  +media-1350
+    margin-bottom: 20px
+
+.category__sort-btn
+  width: 100%
+  padding: 13px 10px
+  font-size: 18px
+  line-height: 21px 
+  text-align: center
+  font-weight: 500
+  cursor: pointer
+  &.active, 
+    font-weight: 700
+    color: #fff
+    background-color: #9FCC3B
+    cursor: default
+
+.category__qnt-subtitle
+  font-size: 14px
+  color: #6C6E6B
+  margin-bottom: 10px
+
+.category__qnt-row
+  display: flex
+  justify-content: space-between
+  align-items: center
+
+.category__qnt-item
+  display: flex
+  justify-content: center
+  align-items: center
+  width: 35px
+  height: 35px
+  border: 2px solid #F2F2F2
+  border-radius: 6px
+  font-size: 14px
+  font-weight: 500
+  color: #A1A1A0
+  cursor: pointer
+  &.active
+    color: #0E0E10
+    border: 2px solid #9FCC3B
+    cursor: default
+
+.category__product-row
+  display: flex
+  flex-wrap: wrap
+  margin: 0 -15px
+
+.category__item
+  width: 20%
+  outline: 1px solid green
+  padding: 15px
+  +media-1600 
+    width: 25%
+  +media-1350
+    width: 33.33%
+
+
+
+
+
+.crumbs
+  padding: 0
+  margin: 0
+  list-style: none
+  margin-bottom: 20px
+  li 
+    display: inline-block
+    margin-right: 10px
+  a, 
+  span 
+    display: inline-block
+    padding: 3px
+    font-size: 14px
+    color: #A1A1A0
+  a 
+    position: relative
+    padding-right: 16px
+    transition: .2s
+    &::before 
+      content: ''
+      position: absolute
+      top: 50%
+      right: 0px 
+      transform: translate(0, -50%) rotate(135deg)
+      width: 7px
+      height: 7px
+      border-top: 2px solid #A1A1A0
+      border-left: 2px solid #A1A1A0
+      transition: .2s
+    &:hover 
+      color: #9FCC3B
+      &::before 
+        border-color: #9FCC3B
+
+
+  
+
