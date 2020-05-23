@@ -12,6 +12,7 @@ Pages
 - https://sergey-shovkoplyas.github.io/local/app/payment.html
 - https://sergey-shovkoplyas.github.io/local/app/payment-2.html
 - https://sergey-shovkoplyas.github.io/local/app/cart.html
+- https://sergey-shovkoplyas.github.io/local/app/category.html
 
 Start template with (optional)
 - normalize.css
