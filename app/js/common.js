@@ -1,6 +1,6 @@
-$( document ).ready(function() {
+$(document).ready(function () {
 
-	$('.header__search-btn').on('click', function(){
+	$('.header__search-btn').on('click', function () {
 		$('.header__search-form').fadeToggle();
 	});
 
@@ -14,7 +14,7 @@ $( document ).ready(function() {
 	// }
 
 
-	
+
 	// -------------------- header__nav toggle ---------------------
 
 	$('.header__nav-btn').on('click', function () {
@@ -46,6 +46,55 @@ $( document ).ready(function() {
 		inputValue++;
 		$input.val(inputValue);
 
+	});
+
+	// -------------------- filter --------------------------
+	$('.filter__btn').on('click', function () {
+		$(this).toggleClass('active');
+		$(this).next('.filter__sublist').slideToggle();
+	});
+
+	$('.filter__category-btn').on('click', function () {
+		$(this).toggleClass('active');
+		$(this).next('.filter__category-sublist').slideToggle();
+	});
+
+	$('.filter__category-sublist-btn').on('click', function () {
+		$(this).toggleClass('active');
+		$(this).next('.filter__category-sublist-sublist').slideToggle();
+	});
+
+	// -------------------- filter-range --------------------------
+
+	let $priceRange = $('.filter__price-range');
+	$priceRange.ionRangeSlider({
+		skin: "round",
+		type: "double",
+		min: 1,
+		max: 5000,
+		from: 1,
+		to: 5000,
+		step: 1
+	});
+
+	let $priceFromArea = $('.filter__price-item.from span');
+	let $priceToArea = $('.filter__price-item.to span');
+	
+
+	$priceRange.on('change', function(){
+		let $inp = $(this);
+		let priceFrom = $inp.data("from");
+		let priceTo = $inp.data("to");
+
+		$priceFromArea.html(priceFrom);
+		$priceToArea.html(priceTo);
+	});
+
+	// -------------------- filter-toggle on mobile --------------------------
+
+	$('.category__filter-toggle').on('click', function(){
+		$(this).toggleClass('active');
+		$('.category__left').slideToggle();
 	});
 
 	// -------------------- popular__slider initialize ---------------------

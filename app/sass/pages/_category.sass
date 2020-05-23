@@ -6,33 +6,39 @@
 .category__row
   display: flex
   justify-content: space-between
-
-.category__left 
-  width: 305px
-  flex-shrink: 0
-  height: 1000px
-  background-color: #F2F2F2
-  margin-right: 30px
+  clear: both
 
 
-// ----------------- .category__right -----------------
+// ----------------- .category__top -----------------
 
-.category__right
-  width: 1395px
-  outline: 1px solid red
+.category__top-wrap
+  float: right
+  +media-1600 
+    float: none
 
 .category__top 
+  width: 1395px
   display: flex
   justify-content: space-between
   align-items: center
   margin-bottom: 100px
+  +media-1600 
+    width: auto
+  +media-md 
+    flex-direction: column
+    margin-bottom: 50px
+  +media-sm 
+    margin-bottom: 30px
 
 .category__title
+  margin-right: 20px
   h1 
     text-transform: uppercase
     margin: 0
     font-size: 40px 
     font-weight: 700
+  +media-md
+    margin-bottom: 20px
   +media-sm 
     h1 
       font-size: 35px
@@ -42,8 +48,11 @@
   justify-content: space-between
   align-items: center
   width: 665px
-  +media-1350 
+  +media-lg
+    width: 100%
+  +media-sm 
     flex-direction: column
+
 
 .category__sort
   display: flex
@@ -52,8 +61,18 @@
   width: 380px
   border: 2px solid #9FCC3B
   border-radius: 8px
-  +media-1350
+  +media-sm 
     margin-bottom: 20px
+    width: 100%
+.category-1
+  +media-1600 
+    .category__buttons
+      justify-content: flex-end
+  +media-md 
+    .category__buttons
+      justify-content: center
+
+
 
 .category__sort-btn
   width: 100%
@@ -68,6 +87,10 @@
     color: #fff
     background-color: #9FCC3B
     cursor: default
+  +media-sm 
+    padding: 10px 4px
+    font-size: 14px
+
 
 .category__qnt-subtitle
   font-size: 14px
@@ -95,24 +118,6 @@
     color: #0E0E10
     border: 2px solid #9FCC3B
     cursor: default
-
-.category__product-row
-  display: flex
-  flex-wrap: wrap
-  margin: 0 -15px
-
-.category__item
-  width: 20%
-  outline: 1px solid green
-  padding: 15px
-  +media-1600 
-    width: 25%
-  +media-1350
-    width: 33.33%
-
-
-
-
 
 .crumbs
   padding: 0
@@ -147,6 +152,102 @@
       color: #9FCC3B
       &::before 
         border-color: #9FCC3B
+
+
+// ----------------- .category__left -----------------
+
+
+.category__left 
+  width: 305px
+  flex-shrink: 0
+  // outline: 1px solid green
+  margin-right: 30px
+  background-color: #fff
+  +media-md
+    display: none
+    position: absolute
+    z-index: 1
+  +media-sm 
+    width: 90%
+
+.category__filter-toggle
+  position: relative
+  display: none
+  padding-right: 20px
+  font-size: 24px
+  font-weight: 500
+  color: #A1A1A0
+  margin-bottom: 20px
+  cursor: pointer
+  &.active
+    color: #006F30
+    &::before
+      transform: translate(0, -50%) rotate(45deg)
+      border-color: #006F30
+  &::before 
+    content: ''
+    position: absolute
+    top: 50%
+    right: 0px 
+    transform: translate(0, -50%) rotate(-135deg)
+    width: 7px
+    height: 7px
+    border-top: 2px solid #A1A1A0
+    border-left: 2px solid #A1A1A0
+    transition: .2s
+  +media-md 
+    display: inline-block
+
+// ----------------- .category__right -----------------
+
+.category__right
+  width: 1395px
+  // outline: 1px solid red
+
+.category__product-row
+  display: flex
+  flex-wrap: wrap
+  margin: 0 -15px
+  margin-bottom: 45px
+  +media-lg
+    margin: 0 -5px
+    margin-bottom: 30px
+  +media-sm
+    flex-direction: column
+    align-items: center
+
+.category__item
+  width: 20%
+  padding: 15px
+  +media-lg
+    padding: 5px
+  +media-1600 
+    width: 25%
+  +media-1350
+    width: 33.33%
+  +media-sm
+    width: 80%
+
+.category__btn
+  width: 220px 
+  margin: 0 auto
+
+.category__pagination
+  display: flex
+  justify-content: space-between
+  margin: 0 auto
+  width: 288px
+  font-size: 18px
+  font-weight: 700
+  color: #A1A1A0
+  a
+    display: block
+    padding: 3px
+  a.active 
+    color: #006F30
+  a:not(.active):hover
+    color: #9FCC3B
+
 
 
   

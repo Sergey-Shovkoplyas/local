@@ -1,0 +1,240 @@
+.filter
+  padding: 0
+  margin: 0 
+  list-style: none 
+
+.filter__item
+  border-bottom: 2px solid #F2F2F2
+
+.filter__sublist
+  display: none
+
+.filter__btn
+  position: relative
+  display: block
+  width: 100%
+  padding: 20px 22px
+  border: 0
+  outline: 0
+  background-color: transparent
+  cursor: pointer
+  text-align: left
+  font-weight: 500
+  font-size: 24px
+  letter-spacing: 0.05em
+  transition: .2s
+  &.active
+    &::before
+      transform: translate(0, -50%) rotate(45deg)
+      border-color: #006F30
+  &::before 
+    content: ''
+    position: absolute
+    top: 50%
+    left: 0px 
+    transform: translate(0, -50%) rotate(-135deg)
+    width: 7px
+    height: 7px
+    border-top: 2px solid #A1A1A0
+    border-left: 2px solid #A1A1A0
+    transition: .2s
+  &:hover 
+    color: #9FCC3B
+    &::before 
+      border-color: #9FCC3B
+  +media-sm 
+    font-size: 20px
+    padding: 15px
+
+.filter__checkbox
+  display: none
+.filter__checkbox:checked + .filter__checkbox-label
+  &::before
+    background: url('../img/checked.svg') no-repeat center
+    border-color: #9FCC3B 
+
+.filter__checkbox-label
+  position: relative
+  display: block
+  padding-left: 30px
+  font-size: 20px
+  letter-spacing: 0.05em
+  color: #6C6E6B
+  margin-bottom: 20px
+  cursor: pointer
+  transition: .2s
+  &::before 
+    content: ''
+    position: absolute
+    top: 50% 
+    left: 0
+    transform: translate(0, -50%)
+    width: 20px
+    height: 20px
+    border: 1.5px solid #A1A1A0
+    border-radius: 5px
+  &:hover 
+    color: #9FCC3B 
+    &::before 
+      border-color: #9FCC3B 
+  +media-sm 
+    font-size: 19px
+    margin-bottom: 15px
+  
+
+// -------------- filter__category --------------------
+
+.filter__category
+  padding: 20px 0px
+  margin: 0
+  margin-bottom: 20px
+  list-style: none
+  background: #F2F2F2
+  border-radius: 10px
+  +media-md 
+    margin-right: 20px
+  +media-sm 
+    margin-right: 0px
+    padding: 10px 0px
+  
+
+.filter__category-btn
+  padding: 10px 20px
+  cursor: pointer
+  font-weight: 500
+  font-size: 20px
+  letter-spacing: 0.05em
+  color: #6C6E6B
+  &:hover 
+    color: #9FCC3B 
+  &.active 
+    position: relative
+    background-color: #EBEBEB
+    color: #006F30
+    font-weight: 500
+    &::before 
+      content: ''
+      position: absolute
+      top: 50%
+      left: 0
+      transform: translate(0, -50%)
+      width: 14px
+      height: 2px
+      background: #A1A1A0
+  +media-sm 
+    font-size: 19px
+    padding: 8px 20px
+  
+
+
+.filter__category-sublist
+  display: none
+  margin: 0
+  padding: 0
+  list-style: none
+  padding-left: 35px
+  background-color: #EBEBEB
+  padding-bottom: 7px
+
+.filter__category-sublist-btn
+  font-size: 18px
+  padding: 7px 0px
+  cursor: pointer
+  a
+    color: #6C6E6B
+  &:hover 
+    color: #9FCC3B 
+    a
+      color: #9FCC3B 
+  &.active 
+    position: relative
+    color: #006F30
+    font-weight: 500
+    &::before 
+      content: ''
+      position: absolute
+      top: 50%
+      left: -35px
+      transform: translate(0, -50%)
+      width: 28px
+      height: 2px
+      background: #A1A1A0
+
+
+.filter__category-sublist-sublist
+  display: none
+  margin: 0
+  padding: 0
+  list-style: none
+  padding-left: 12px
+  li 
+    padding: 7px 0px
+    cursor: pointer
+    &:hover 
+      color: #9FCC3B 
+  li.active 
+    font-weight: 500
+    color: #006F30
+
+// -------------- filter__price --------------------
+
+.filter__price-row
+  display: flex
+  justify-content: space-between
+
+.filter__price-item
+  width: 48% 
+  padding: 11px 12px
+  background: #F2F2F2
+  border-radius: 6px
+  text-align: center 
+  color: #6C6E6B
+  letter-spacing: 0.05em
+  font-weight: 500
+
+.filter__price
+  margin-top: 7px
+  margin-bottom: 20px
+  width: 260px
+  .irs-from,
+  .irs-to,
+  .irs-min,
+  .irs-max,
+  .irs-single
+    display: none 
+  .irs--round
+    height: 40px
+  .irs-line
+    height: 7px
+    top: 0
+  .irs-bar
+    top: 0
+    height: 7px
+    background-color: #9FCC3B 
+  .irs-handle
+    top: -7px
+    width: 20px
+    height: 20px
+    background-color: #A1A1A0
+    border: 6px solid #F2F2F2
+    cursor: pointer
+    &:hover,
+    &:active
+      background-color: #A1A1A0
+  +media-sm 
+    .irs--round
+      height: 30px
+      
+// -------------- filter__remove --------------------
+
+.filter__remove 
+  margin-top: 20px
+  font-weight: 700
+  font-size: 20px
+  letter-spacing: 0.05em
+  color: #A1A1A0 
+  transition: .2s
+  cursor: pointer
+  margin-bottom: 20px
+  &:hover 
+    color: #9FCC3B 
