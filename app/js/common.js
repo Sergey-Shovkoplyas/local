@@ -19,7 +19,8 @@ $(document).ready(function () {
 
 	$('.header__nav-btn').on('click', function () {
 		$('.header__nav-btn .nav-btn').toggleClass('active');
-		// $('.header__nav').slideToggle();
+		$('.header').toggleClass('header--scroll');
+		$('.roll-wrap').slideToggle();
 	});
 
 	// -------------------- footer show sublist ---------------------
@@ -95,6 +96,24 @@ $(document).ready(function () {
 	$('.category__filter-toggle').on('click', function(){
 		$(this).toggleClass('active');
 		$('.category__left').slideToggle();
+	});
+
+	// -------------------- roll (catalog list) --------------------------
+
+	$('.header__catalog-btn').on('click', function(){
+		$(this).toggleClass('active');
+		$('.roll-wrap').slideToggle();
+	});
+
+	$('.roll__item').on('click', function(){
+		let $sublist = $(this).next('.roll__list--sublist');
+		let $parrentList = $(this).parent().parent('.roll__list');
+		if ($sublist.length) {
+			$(this).toggleClass('active');
+			$sublist.slideToggle();
+			$parrentList.find('.roll__list').not($sublist).slideUp(0);
+			$parrentList.find('.active').not(this).removeClass('active');
+		}
 	});
 
 	// -------------------- popular__slider initialize ---------------------

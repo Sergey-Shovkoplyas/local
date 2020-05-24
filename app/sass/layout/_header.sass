@@ -1,4 +1,5 @@
 .header 
+  position: relative
   background-color: #F8F8F8
   padding: 23px 0px
   +media-sm 
@@ -7,6 +8,11 @@
     z-index: 100
     width: 100%
     padding: 10px 0px
+    &--scroll 
+      height: 100%
+      overflow-y: scroll
+
+
 
 .header__row
   display: flex
@@ -52,21 +58,35 @@
 
 .header__catalog-btn
   position: relative
-  padding-left: 20px
+  padding: 14px 20px
+  padding-left: 30px
   font-size: 24px 
   border: none
   outline: none
   background-color: transparent
   cursor: pointer
   white-space: nowrap
+  border-radius: 7px
+  transition: .2s
   &::before
     position: absolute
     content: ''
-    top: 11px
-    left: 0
+    top: 50%
+    left: 10px
+    transform: translate(0, -50%)
     width: 12px
     height: 8px
     background: url('../img/catalog-arrow.svg') no-repeat center
+    transition: .2s
+  &:hover
+    color: #9FCC3B
+  &.active 
+    background-color: #9FCC3B
+    font-weight: 500
+    color: #fff
+    &::before
+      background: url('../img/catalog-arrow-white.svg') no-repeat center
+      transform: translate(0, -50%) rotate(180deg)
   +media-lg 
     font-size: 20px
   +media-md 
@@ -87,6 +107,7 @@
 
 .header__search-form
   position: relative
+  z-index: 100
   +media-1300 
     display: none
     position: absolute
@@ -164,7 +185,7 @@
   margin-right: 25px
   &:hover 
     color: #9FCC3B
-    text-decoration: underline
+    // text-decoration: underline
   +media-lg 
     font-size: 20px
   +media-md 
@@ -211,4 +232,96 @@
   +media-sm 
     display: none
 
+// ---------------- roll --------------------------
 
+.roll-wrap 
+  // outline: 1px solid red
+  display: none
+  width: 1200px
+  padding: 20px 0px
+  border-top: 2px solid #9FCC3B
+  position: absolute
+  top: 100%
+  z-index: 10
+  left: 50%
+  transform: translate(-50%, 0)
+  background: #F8F8F8
+  +media-lg 
+    width: 960px
+  +media-md
+    width: 720px
+  +media-sm 
+    top: 54px
+    width: 100%
+
+.roll__list
+  position: relative
+  z-index: 1
+  padding: 0 
+  margin: 0
+  list-style: none
+  width: 330px
+  border-right: 1.5px solid #E5E5E5
+  background: #F8F8F8
+  &.last 
+    width: 535px
+    border-right: none
+  +media-lg 
+    width: 300px
+    &.last
+      width: 355px
+  +media-md
+    width: 220px
+    &.last
+      width: 275px
+  +media-sm 
+    width: 100%
+    border-right: none
+    &.last
+      width: 100%
+
+.roll__item
+  font-size: 20px 
+  padding: 11px 30px
+  cursor: pointer
+  &:hover,
+  &.active
+    background: #E5E5E5
+  &.all 
+    font-weight: 700
+    color: #9FCC3B
+  +media-md
+    padding: 10px
+
+.roll__list--sublist
+  display: none
+  position: absolute
+  top: 0
+  left: 101%
+  height: 100%
+  +media-sm 
+    position: static
+    padding-left: 15px
+    border-bottom: 1px solid #E5E5E5
+    // height: auto
+
+.roll__popular
+  position: absolute
+  top: 30px 
+  right: 50px
+  width: 270px
+  height: 750px
+  +media-sm 
+    display: none
+
+
+.roll__popular-title
+  text-transform: uppercase
+  font-size: 24px 
+  text-align: center
+  margin-bottom: 30px
+
+.roll__popular-item
+  width: 255px
+  margin: 0 auto 
+  margin-bottom: 30px
