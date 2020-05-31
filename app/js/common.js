@@ -80,9 +80,9 @@ $(document).ready(function () {
 
 	let $priceFromArea = $('.filter__price-item.from span');
 	let $priceToArea = $('.filter__price-item.to span');
-	
 
-	$priceRange.on('change', function(){
+
+	$priceRange.on('change', function () {
 		let $inp = $(this);
 		let priceFrom = $inp.data("from");
 		let priceTo = $inp.data("to");
@@ -93,19 +93,19 @@ $(document).ready(function () {
 
 	// -------------------- filter-toggle on mobile --------------------------
 
-	$('.category__filter-toggle').on('click', function(){
+	$('.category__filter-toggle').on('click', function () {
 		$(this).toggleClass('active');
 		$('.category__left').slideToggle();
 	});
 
 	// -------------------- roll (catalog list) --------------------------
 
-	$('.header__catalog-btn').on('click', function(){
+	$('.header__catalog-btn').on('click', function () {
 		$(this).toggleClass('active');
 		$('.roll-wrap').slideToggle();
 	});
 
-	$('.roll__item').on('click', function(){
+	$('.roll__item').on('click', function () {
 		let $sublist = $(this).next('.roll__list--sublist');
 		let $parrentList = $(this).parent().parent('.roll__list');
 		if ($sublist.length) {
@@ -152,12 +152,12 @@ $(document).ready(function () {
 	// -------------------- press__slider initialize ---------------------
 
 	var $slider = $('.press__slider-row');
-  var $progressBar = $('.press__slider-bar');
-	
-	$slider.on('beforeChange', function(event, slick, currentSlide, nextSlide) {   
-    var calc = ( (nextSlide) / (slick.slideCount-1) ) * 100;
-    $progressBar.css('background-size', calc + '% 100%');
-  });
+	var $progressBar = $('.press__slider-bar');
+
+	$slider.on('beforeChange', function (event, slick, currentSlide, nextSlide) {
+		var calc = ((nextSlide) / (slick.slideCount - 1)) * 100;
+		$progressBar.css('background-size', calc + '% 100%');
+	});
 
 	$slider.slick({
 		dots: true,
@@ -168,10 +168,20 @@ $(document).ready(function () {
 
 	// -------------------- shops__address hide/open ---------------------
 
-	$('.shops__address-drag').on('click', function(){
+	$('.shops__address-drag').on('click', function () {
 		$(this).toggleClass('active');
 		$('.shops__address').toggleClass('active');
 	});
 
+	// -------------------- news-tabs ---------------------
+
+	$('.news__sort a').on('click', function () {
+		$(this).addClass('active');
+		$('.news__sort a').not($(this)).removeClass('active');
+		let num = +$(this).attr('data-num') - 1;
+		let text = $('.news__tab-item')[num];
+		$('.news__tab-item').not(text).removeClass('active');
+		$(text).addClass('active');
+	});
 
 });
