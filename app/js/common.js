@@ -149,5 +149,29 @@ $(document).ready(function () {
 		]
 	});
 
+	// -------------------- press__slider initialize ---------------------
+
+	var $slider = $('.press__slider-row');
+  var $progressBar = $('.press__slider-bar');
+	
+	$slider.on('beforeChange', function(event, slick, currentSlide, nextSlide) {   
+    var calc = ( (nextSlide) / (slick.slideCount-1) ) * 100;
+    $progressBar.css('background-size', calc + '% 100%');
+  });
+
+	$slider.slick({
+		dots: true,
+		appendDots: $('.press__slider-controls'),
+		prevArrow: $('.press__slider-arrov.prev'),
+		nextArrow: $('.press__slider-arrov.next'),
+	});
+
+	// -------------------- shops__address hide/open ---------------------
+
+	$('.shops__address-drag').on('click', function(){
+		$(this).toggleClass('active');
+		$('.shops__address').toggleClass('active');
+	});
+
 
 });

@@ -14,6 +14,11 @@ Pages
 - https://sergey-shovkoplyas.github.io/local/app/cart.html
 - https://sergey-shovkoplyas.github.io/local/app/category.html
 - https://sergey-shovkoplyas.github.io/local/app/category-1.html
+- 
+- https://sergey-shovkoplyas.github.io/local/app/press.html
+- https://sergey-shovkoplyas.github.io/local/app/press-1.html
+- https://sergey-shovkoplyas.github.io/local/app/news.html
+- https://sergey-shovkoplyas.github.io/local/app/shops.html
 
 Start template with (optional)
 - normalize.css

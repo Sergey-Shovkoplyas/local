@@ -1,0 +1,93 @@
+.news__wrapper
+  padding: 80px 0px
+  background-color: #F2F2F2
+  +media-sm 
+    padding: 50px 0px
+  
+.news__title
+  text-align: left
+  margin-bottom: 60px
+  h1 
+    text-transform: uppercase
+    margin: 0
+    font-size: 40px 
+    font-weight: 700
+  +media-sm 
+    margin-bottom: 30px
+    text-align: center
+    h1 
+      font-size: 35px
+    
+.news__sort
+  // outline: 1px solid red
+  padding: 0
+  margin: 0
+  list-style: none 
+  display: flex
+  margin-bottom: 15px
+  border-bottom: 2.5px solid #fff
+  a 
+    // outline: 1px solid green
+    display: block
+    margin-bottom: -2.5px
+    padding: 15px 24px
+    font-size: 18px
+    font-weight: 700
+    color: #3D3D3D
+  a.active 
+    border-bottom: 2.5px solid #006F30
+    color: #3A8A56
+  a:not(.active):hover 
+    color: #9FCC3B
+  li:first-child 
+    a 
+      padding-left: 0
+  +media-sm 
+    flex-direction: column
+    border-bottom: none
+    text-align: center
+    li 
+      border-bottom: 2.5px solid #fff
+    li:first-child a 
+      padding: 15px 24px
+
+
+.news__row
+  // outline: 1px solid red
+  display: flex
+  flex-wrap: wrap
+  margin: 0 -15px
+  margin-bottom: 65px
+  +media-sm 
+    justify-content: center
+  
+
+.news__item
+  // outline: 1px solid green
+  width: 25%
+  padding: 15px
+  +media-md 
+    width: 33.33%
+  +media-sm
+    width: 100%
+    max-width: 290px
+
+.news__box-img
+  border-radius: 6px
+  overflow: hidden
+  margin-bottom: 20px
+  img 
+    width: 100%
+    transition: .2s
+  a 
+    display: block
+  &:hover 
+    img 
+      transform: scale(1.03)
+  
+
+.news__box-text
+  font-size: 18px
+  letter-spacing: 0.05em
+  a:hover 
+    color: #9FCC3B
