@@ -233,20 +233,28 @@
   margin: 0 auto
 
 .category__pagination
+  // outline: 1px solid green
   display: flex
-  justify-content: space-between
+  justify-content: center
   margin: 0 auto
-  width: 288px
   font-size: 18px
   font-weight: 700
   color: #A1A1A0
   a
     display: block
     padding: 3px
+    margin-right: 24px
   a.active 
     color: #006F30
   a:not(.active):hover
     color: #9FCC3B
+  a:last-child 
+    margin-right: 0
+  +media-sm 
+    margin: 0 -15px
+    flex-wrap: wrap
+    a
+      margin-right: 4px
 
 
 
